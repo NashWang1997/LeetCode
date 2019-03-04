@@ -1,0 +1,15 @@
+//https://leetcode.com/problems/jewels-and-stones/
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        int cnt = 0, i, j;
+        for (i=0; S[i]!='\0'; ++i) {
+            for (j=0; J[j]!='\0'; ++j) {
+                if (S[i] == J[j]) {
+                    cnt++; break;
+                }
+            }
+        }
+        return cnt;
+    }
+};
